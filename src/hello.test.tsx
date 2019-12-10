@@ -1,16 +1,13 @@
 import React from 'react';
-import {render, fireEvent} from "@testing-library/react";
+import {render} from "@testing-library/react";
 import Hello from "./hello";
+import '@testing-library/jest-dom/extend-expect'
 
 
-describe('Hello', () => {
-  test('handle onChange', () => {
-    const mockOnChange = jest.fn()
-    const wrapper = render(<Hello name='typescript' onChange={mockOnChange}/>)
-    const inputNode = wrapper.container.querySelector('input')!
-
-    fireEvent.change(inputNode, {target: {value: 'react'}});
-
-    expect(mockOnChange).toHaveBeenCalledWith('react');
+describe('select', () => {
+  test('selected value', () => {
+    const {container} = render(<Hello/>)
+    const select = container.querySelector<HTMLInputElement>('select');
+    expect(select!.value).toEqual('222');
   });
 })

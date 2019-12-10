@@ -1,9 +1,7 @@
-TypeScript React "react-testing-library" Demo
-=============================================
+TypeScript React "@testing-library/react" Check Selected Value fro Select Demo
+=============================================================================
 
-如何使用jest和`react-testing-library`来测试react component的行为。
-
-`react-testing-library`已经迁移到`@testing-library/react`
+使用`@testing-library/react`来测试select的selected value
 
 ```
 npm install
